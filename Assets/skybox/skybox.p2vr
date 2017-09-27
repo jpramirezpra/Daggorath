@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Pano2VR project file  -->
+<pano2vrconfig rev="15983" version="5.2.2">
+  <panorama>
+    <id>node1</id>
+    <input>
+      <patch/>
+      <type>cylindrical</type>
+      <filename>textures/skybox.tiff</filename>
+      <levelpitch>0</levelpitch>
+      <levelroll>0</levelroll>
+    </input>
+    <viewingparameter>
+      <pan/>
+      <tilt/>
+      <fov/>
+      <flyinstart/>
+      <pannorth>0</pannorth>
+    </viewingparameter>
+    <userdata>
+      <tags>textures</tags>
+    </userdata>
+    <floorplans/>
+    <hotspots/>
+    <output>
+      <thumb>
+        <html>
+          <enabled>0</enabled>
+          <filename>output/index.html</filename>
+        </html>
+        <facequality/>
+        <filename>output/pano.jpg</filename>
+        <type>cubeface</type>
+        <height>2048</height>
+        <fov>70</fov>
+        <width>2048</width>
+        <cubefacenaming>bottom</cubefacenaming>
+      </thumb>
+    </output>
+    <streetview/>
+    <streetviewproject/>
+    <sounds/>
+  </panorama>
+</pano2vrconfig>

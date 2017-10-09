@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using GVR;
 
 public class TextureEvent : GvrAllEventsTrigger {
     public static string materialname;
-
-
-
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private GameObject myAudiomanagerPaint;
+    private GameObject myAudiomanagerSelect;
+    // Use this for initialization
+    void Start () {
+        myAudiomanagerPaint = GameObject.Find("audioContainerPaint");
+        myAudiomanagerSelect = GameObject.Find("audioContainerSelect");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,6 +39,7 @@ public class TextureEvent : GvrAllEventsTrigger {
     {
 		string mat = this.GetComponent<Renderer>().material.name;
 		materialname = mat.Substring(0, mat.IndexOf(" "));
+        myAudiomanagerSelect.GetComponent<GvrAudioSource>().Play();
     }
 
 	public void PaintObject(BaseEventData flotie){
@@ -47,7 +48,8 @@ public class TextureEvent : GvrAllEventsTrigger {
 		if (mat != null) {
 			this.GetComponent<Renderer>().sharedMaterial = mat;
 		}
-	}
+        myAudiomanagerPaint.GetComponent<GvrAudioSource>().Play();
+    }
 
 }
 
